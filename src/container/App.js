@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import PhoneBook from './container/phoneBook';
-import PhoneBookTable from './views/phoneBookTable';
+import PhoneBook from '../components/phoneBook';
+import PhoneBookTable from '../views/phoneBookTable';
 
 function App() {
   const usersData = []
