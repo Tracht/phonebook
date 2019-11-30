@@ -23,7 +23,7 @@ src
 │   └── App.css
 │   └── App.test.js
 ├── views
-│   └── phoneBookTable.js
+│   └── GenericTable.js
 └── index.js
 └── index.css
 └── serviceWorker.js
