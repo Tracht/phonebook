@@ -12,6 +12,17 @@ function App() {
     setUsers([...users, user])
   }
 
+  const sortedArray = (users, fieldName='lastName') => {
+    return users.sort(function (a, b) {
+      var nameA = a[fieldName].toLowerCase(), nameB = b[fieldName].toLowerCase()
+      if (nameA < nameB) //sort string ascending
+        return -1
+      if (nameA > nameB)
+        return 1
+      return 0 //default return value (no sorting)
+    })
+  }
+
   return (
     <div className="container">
       <h1>React PhoneBook using Hooks</h1>
@@ -22,7 +33,7 @@ function App() {
         </div>
         <div className="flex-large">
           <h2>View users</h2>
-          <PhoneBookTable users={users} />
+          <PhoneBookTable users={sortedArray(users)} />
         </div>
       </div>
     </div>
