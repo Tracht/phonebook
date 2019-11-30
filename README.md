@@ -2,6 +2,8 @@
 
 The purpose of this project is to demonstarte the usage of react hooks to build sample forms. In this example we will try to build a sample form to store contact details of user anddisplay it. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Live Demo at <https://react-phone-book-94da7.firebaseapp.com/>
+
 ## To get started
 
 Assuming that you have [npm](https://www.npmjs.com/get-npm) installed in your machine. Please follow below steps, in the project directory, please run following commands:
@@ -38,5 +40,6 @@ I have repalced body of index.css with content from following css file for beaut
 
 - [x] Publish code to FireBase.
 - [x] Update readme file.
+- [ ] Update publish to match latest code once code review from UB is done??
 - [ ] Blog on Medium on how i did it??
 - [ ] Should i perform CRUD Operation?? 
