@@ -38,5 +38,5 @@ I have repalced body of index.css with content from following css file for beaut
 
 - [x] Publish code to FireBase.
 - [x] Update readme file.
-- [] Blog on Medium on how i did it??
-- [] Should i perform CRUD Operation?? 
+- [ ] Blog on Medium on how i did it??
+- [ ] Should i perform CRUD Operation?? 
