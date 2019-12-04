@@ -14,7 +14,7 @@ const GenericTable = props => {
             <h2>View {props.title} </h2>
             <table>
                 {
-                    dataList.length ?
+                    dataList && dataList.length ?
                         (
                             <>
                                 <thead>

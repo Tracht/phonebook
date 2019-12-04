@@ -11,6 +11,9 @@ Assuming that you have [npm](https://www.npmjs.com/get-npm) installed in your ma
 *  `yarn install` or `npm install`
 *  `yarn start`
 
+## Testing 
+Run `yarn test` command to run all test cases written for this project.
+
 ## Folder structure Approach
 I have segregated files based on what they do in different folders. Components which have external API actions and maintain their own internal state are put in to containers, Components which maintain their own internal state are put in to components and components which just consume the data and perform render options are put in views folder.  
 
@@ -20,14 +23,17 @@ src
 │   └── logo.svg
 ├── components
 │   └── phonebook.js
+│   └── Phonebook.test.js
 ├── container
 │   └── App.js
 │   └── App.css
 │   └── App.test.js
 ├── views
 │   └── GenericTable.js
+│   └── GenericTable.test.js
 └── index.js
 └── index.css
+└── setupTests.js
 └── serviceWorker.js
 ```
 

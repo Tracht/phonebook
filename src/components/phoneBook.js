@@ -1,7 +1,13 @@
 import React, { useState } from 'react'
 
 const AddContactDetailsForm = props => {
-    const initialFormState = { id: null, firstName: '', lastName: '', phoneNumber: '' }
+    const initialFormState = { 
+                                id: null || props.id, 
+                                firstName: '' || props.firstName, 
+                                lastName: '' || props.lastName, 
+                                phoneNumber: '' || props.phoneNumber 
+                            }
+                            
     const [user, setUser] = useState(initialFormState)
 
     const handleInputChange = event => {
@@ -18,13 +24,13 @@ const AddContactDetailsForm = props => {
                 setUser(initialFormState)
             }}
         >
-            <label>First Name</label>
+            <label htmlFor="firstName">First Name</label>
             <input type="text" name="firstName" value={user.firstName} onChange={handleInputChange} />
-            <label>lastName</label>
+            <label htmlFor="lastName">lastName</label>
             <input type="text" name="lastName" value={user.lastName} onChange={handleInputChange} />
-            <label>Phone Number</label>
+            <label htmlFor="phoneNumber" >Phone Number</label>
             <input type="text" name="phoneNumber" value={user.phoneNumber} onChange={handleInputChange} />
-            <button>Add new Contact</button>
+            <button type="submit">Add new Contact</button>
         </form>
     )
 }
