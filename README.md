@@ -1,4 +1,4 @@
-# Storing Contact Details using React Hooks
+# Storing Climbs in a 'Climbing Book' using React Hooks
 
 This project builds a sample form to store contact details of user and display it. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
 
