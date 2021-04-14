@@ -38,3 +38,7 @@ src
 └── setupTests.js
 └── serviceWorker.js
 ```
+
+#### To do
+* Edit a climb
+* Delete a climb
