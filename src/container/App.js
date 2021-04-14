@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { sortAtoZ } from '../utils/util';
 import './App.css';
 import PhoneBook from '../components/phoneBook';
-import GenericTable from '../views/GenericTable';
+import Table from '../views/Table';
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -9,19 +10,6 @@ function App() {
   const addUser = user => {
     user.id = users.length + 1;
     setUsers([...users, user]);
-  }
-
-  const sortByLastNameAtoZ = (users, fieldName = 'lastName') => {
-    return users.sort(function (a, b) {
-      var nameA = a[fieldName].toLowerCase();
-      var nameB = b[fieldName].toLowerCase();
-      
-      if (nameA < nameB) //sort string ascending
-        return -1
-      if (nameA > nameB)
-        return 1
-      return 0 //default return value (no sorting)
-    })
   }
 
   return (
@@ -33,23 +21,26 @@ function App() {
           <PhoneBook addUser={addUser} />
         </div>
       </div>
+
       <div className="flex-row">
         <div className="flex-large">
-          <GenericTable
+          <Table
             primaryKey={'id'}
             title={'Generic User List 1'}
             columns={['First Name', 'Last Name']}
             rowsKeys={['firstName', 'lastName']}
-            data={sortByLastNameAtoZ(users)} />
+            data={sortAtoZ(users, 'lastName')} />
         </div>
+       
         <div className="flex-large">
-          <GenericTable
+          <Table
             primaryKey={'id'}
             title={'Generic User List 2'}
             columns={['First Name', 'Last Name', 'Phone Number']}
             rowsKeys={['firstName', 'lastName', 'phoneNumber']}
-            data={sortByLastNameAtoZ(users)} />
+            data={sortAtoZ(users, 'lastName')} />
         </div>
+        
       </div>
     </div>
 

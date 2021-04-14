@@ -5,7 +5,7 @@ import React from 'react'
  * It takes title, rows headers, row data keys and he actual data as input.
  * Primary key is the defined per each row.
  */
-const GenericTable = props => {
+const Table = props => {
     const dataList = props.data;
     const columns = props.columns;
     const rows = props.rowsKeys;
@@ -47,4 +47,4 @@ const GenericTable = props => {
     )
 }
 
-export default GenericTable
+export default Table
