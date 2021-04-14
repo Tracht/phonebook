@@ -1,4 +1,4 @@
-function sortAtoZ (users, fieldName = 'lastName') {
+function sortAtoZ (users, fieldName) {
     return users.sort(function (a, b) {
       var nameA = a[fieldName].toLowerCase();
       var nameB = b[fieldName].toLowerCase();
