@@ -4,17 +4,18 @@ import PhoneBook from '../components/phoneBook';
 import GenericTable from '../views/GenericTable';
 
 function App() {
-  const usersData = []
-  const [users, setUsers] = useState(usersData)
+  const [users, setUsers] = useState([]);
 
   const addUser = user => {
-    user.id = users.length + 1
-    setUsers([...users, user])
+    user.id = users.length + 1;
+    setUsers([...users, user]);
   }
 
-  const sortedArray = (users, fieldName = 'lastName') => {
+  const sortByLastNameAtoZ = (users, fieldName = 'lastName') => {
     return users.sort(function (a, b) {
-      var nameA = a[fieldName].toLowerCase(), nameB = b[fieldName].toLowerCase()
+      var nameA = a[fieldName].toLowerCase();
+      var nameB = b[fieldName].toLowerCase();
+      
       if (nameA < nameB) //sort string ascending
         return -1
       if (nameA > nameB)
@@ -39,7 +40,7 @@ function App() {
             title={'Generic User List 1'}
             columns={['First Name', 'Last Name']}
             rowsKeys={['firstName', 'lastName']}
-            data={sortedArray(users)} />
+            data={sortByLastNameAtoZ(users)} />
         </div>
         <div className="flex-large">
           <GenericTable
@@ -47,7 +48,7 @@ function App() {
             title={'Generic User List 2'}
             columns={['First Name', 'Last Name', 'Phone Number']}
             rowsKeys={['firstName', 'lastName', 'phoneNumber']}
-            data={sortedArray(users)} />
+            data={sortByLastNameAtoZ(users)} />
         </div>
       </div>
     </div>

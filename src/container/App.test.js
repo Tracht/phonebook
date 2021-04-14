@@ -20,9 +20,9 @@ describe('App Container', () => {
     const PhonebookComponent = shallow(<PhoneBook />);
     expect(PhonebookComponent.exists()).toBe(true);
   });
+
   it('Table View Rendering', () => {
     const GenericTableView = shallow(<GenericTable data={[]} />);
     expect(GenericTableView.exists()).toBe(true);
   });
-
 })
