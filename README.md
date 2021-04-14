@@ -20,7 +20,7 @@ This project builds a sample form to store contact details of user and display i
 
 ```
 src
-├── assests
+├── assets
 ├── components
 │   └── phonebook.js
 │   └── Phonebook.test.js
@@ -28,6 +28,8 @@ src
 │   └── App.js
 │   └── App.css
 │   └── App.test.js
+├── utils
+│   └── util.js
 ├── views
 │   └── Table.js
 │   └── Table.test.js
