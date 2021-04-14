@@ -13,7 +13,7 @@ const Table = props => {
     
     return (
         <>
-        <h2>View {props.title} </h2>
+        <h2>{props.title} </h2>
         <table>
             <thead>
                 <tr>

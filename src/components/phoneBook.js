@@ -2,38 +2,38 @@ import React, { useState } from 'react'
 
 const PhoneBook = (props) => {
     
-    const addUser = props.addUser;
+    const addClimb = props.addClimb;
     
     const initialFormState = { 
         id: null,
-        firstName: '', 
-        lastName: '', 
-        phoneNumber: '' 
+        route: '', 
+        country: '', 
+        grade: '' 
     }
                             
-    const [user, setUser] = useState(initialFormState)
+    const [climb, setClimb] = useState(initialFormState)
 
     const handleInputChange = e => {
         const { name, value } = e.target
-        setUser({ ...user, [name]: value })
+        setClimb({ ...climb, [name]: value })
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        if (!user.firstName || !user.lastName || !user.phoneNumber) return
-        addUser(user);
-        setUser(initialFormState); // resets the form
+        if (!climb.route || !climb.country || !climb.grade) return
+        addClimb(climb);
+        setClimb(initialFormState); // resets the form
     }
 
     return (
         <form onSubmit={handleSubmit}>
-            <label htmlFor="firstName">First Name</label>
-            <input type="text" name="firstName" value={user.firstName} onChange={handleInputChange} />
-            <label htmlFor="lastName">lastName</label>
-            <input type="text" name="lastName" value={user.lastName} onChange={handleInputChange} />
-            <label htmlFor="phoneNumber" >Phone Number</label>
-            <input type="text" name="phoneNumber" value={user.phoneNumber} onChange={handleInputChange} />
-            <button type="submit">Add new Contact</button>
+            <label htmlFor="route">Route</label>
+            <input type="text" name="route" value={climb.route} onChange={handleInputChange} />
+            <label htmlFor="country">Country</label>
+            <input type="text" name="country" value={climb.country} onChange={handleInputChange} />
+            <label htmlFor="grade">Grade</label>
+            <input type="text" name="grade" value={climb.grade} onChange={handleInputChange} />
+            <button type="submit">Add new climb</button>
         </form>
     )
 }

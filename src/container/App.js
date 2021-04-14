@@ -5,20 +5,20 @@ import PhoneBook from '../components/phoneBook';
 import Table from '../views/Table';
 
 function App() {
-  const [users, setUsers] = useState([]);
+  const [climbs, setClimbs] = useState([]);
 
-  const addUser = user => {
-    user.id = users.length + 1;
-    setUsers([...users, user]);
+  const addClimb = climb => {
+    climb.id = climbs.length + 1;
+    setClimbs([...climbs, climb]);
   }
 
   return (
     <div className="container">
-      <h1>React PhoneBook using Hooks</h1>
+      <h1>Climbing Book using Hooks</h1>
       <div className="flex-row">
         <div className="flex-large">
-          <h2>Add User Detail</h2>
-          <PhoneBook addUser={addUser} />
+          <h2>Add Climb</h2>
+          <PhoneBook addClimb={addClimb} />
         </div>
       </div>
 
@@ -26,21 +26,21 @@ function App() {
         <div className="flex-large">
           <Table
             primaryKey={'id'}
-            title={'Generic User List 1'}
-            columns={['First Name', 'Last Name']}
-            rowsKeys={['firstName', 'lastName']}
-            data={sortAtoZ(users, 'lastName')} />
+            title={'Routes'}
+            columns={['Route', 'Country']}
+            rowsKeys={['route', 'country']}
+            data={sortAtoZ(climbs, 'country')} />
         </div>
        
         <div className="flex-large">
           <Table
             primaryKey={'id'}
-            title={'Generic User List 2'}
-            columns={['First Name', 'Last Name', 'Phone Number']}
-            rowsKeys={['firstName', 'lastName', 'phoneNumber']}
-            data={sortAtoZ(users, 'lastName')} />
+            title={'Routes & Grades'}
+            columns={['Route', 'Country', 'Grade']}
+            rowsKeys={['route', 'country', 'grade']}
+            data={sortAtoZ(climbs, 'country')} />
         </div>
-        
+
       </div>
     </div>
 
