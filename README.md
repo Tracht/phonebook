@@ -1,8 +1,9 @@
 # Storing Climbs in a 'Climbing Book' using React Hooks
 
-This project builds a sample form to store contact details of user and display it. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
+This project builds a sample form to store contact details of user and display it. 
 
 ## Tech stack:
+* This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
 * [primtive.css](https://taniarascia.github.io/primitive/css/main.css) 
 
 ### To get this running on your local machine
